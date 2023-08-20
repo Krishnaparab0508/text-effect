@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700;800&display=swap");
+@font-face {
+  font-family: Zuume Font;
+  src: url(./Zuume-ExtraBold.otf);
+}
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Spectral", serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #111;
+}
+nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 15vh;
+  padding: 0vw 10vw;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1)2s;
+}
+.center-nav {
+  display: flex;
+  gap: 2vw;
+}
+.center-nav a {
+  color: #fff;
+  font-size: 1.2vw;
+  text-decoration: none;
+  padding: 0.7vw 1.5vw;
+  border-radius: 50px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+.lft-nav a img {
+  width: 7vw;
+}
+.center-nav a:hover {
+  color: rgb(130, 234, 130);
+  background-color: rgb(32, 77, 32);
+}
+.rght-nav button {
+  padding: 1vw 2vw;
+  border-radius: 10px;
+  border: none;
+  font-size: 1vw;
+}
+.lft {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 10vw;
+  justify-content: center;
+  gap: 5vh;
+}
+.lft h1 {
+  font-size: 10vw;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: url(https://media.giphy.com/media/xTiTnH6wXUgzAgpDRm/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 17vh;
+  font-family: Zuume Font;
+}
+.lft p {
+  width: 25vw;
+  color: #fff;
+  font-size: 1.2vw;
+}
+.btn {
+  display: flex;
+  gap: 2vw;
+}
+.btn button {
+  padding: 1.2vw 2vw;
+  border-radius: 10px;
+  border: none;
+  font-size: 1vw;
+}
+.btn button:nth-child(1) {
+  background-color: greenyellow;
+}
+.rght {
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rght video {
+  width: 90%;
+  padding-top: 2vw;
+}
+.ri-menu-fill {
+  color: #fff;
+  font-size: 7vw;
+  display: none;
+}
+@media (max-width: 500px) {
+  .ri-menu-fill {
+    display: initial;
+  }
+  .center-nav {
+    display: none;
+  }
+  .rght-nav {
+    display: none;
+  }
+  .lft-nav a img {
+    width: 25vw;
+  }
+  #main {
+    flex-direction: column;
+  }
+  .lft {
+    width: 100%;
+    align-items: center;
+    padding-left: 0vw;
+  }
+  .lft h1 {
+    font-size: 30vw;
+    margin-top: 15vh;
+  }
+  .lft p {
+    font-size: 6vw;
+    width: 85vw;
+  }
+  .btn {
+    gap: 2vh;
+    flex-direction: column;
+  }
+  .btn button {
+    padding: 5vw 15vw;
+    font-size: 4.5vw;
+  }
+  .rght {
+    width: 100%;
+    height: 50vh;
+  }
+}
